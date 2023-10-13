@@ -10,6 +10,7 @@ on:
       - 'pcb_io/*.kibot.yaml'
       - 'pcb_io/Makefile'
       - '.github/workflows/spora_io.yml'
+      - 'readme.md'
   pull_request:
     paths:
       - 'pcb_io/*.sch'
