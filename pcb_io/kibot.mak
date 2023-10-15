@@ -68,6 +68,8 @@ PCBWay: Fabrication/PCBWay/spora_io-PCBWay_0.1.zip
 
 print_sch: Fabrication/Schematic.pdf
 
+print_sch_svg: Fabrication/Schematic.svg
+
 print_front: Fabrication/PCB_Top.pdf
 
 print_bottom: Fabrication/PCB_Bottom.pdf
@@ -160,6 +162,9 @@ Fabrication/PCBWay/spora_io-PCBWay_0.1.zip: Fabrication/PCBWay/spora_io.gtl Fabr
 # Print schematic (PDF)
 Fabrication/Schematic.pdf: spora_io.sch spora_io.kibot.yaml
 	@$(KIBOT_CMD) -s all print_sch 2>> $(LOGFILE)
+
+Fabrication/Schematic.svg: spora_io.sch spora_io.kibot.yaml
+	@$(KIBOT_CMD) -s all print_sch_svg 2>> $(LOGFILE)
 
 # Print F.Cu+Dwgs.User
 Fabrication/PCB_Top.pdf: spora_io.kicad_pcb spora_io.kibot.yaml
