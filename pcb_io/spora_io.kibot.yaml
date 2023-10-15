@@ -35,8 +35,8 @@ outputs:
     options:
       output: Schematic.pdf
       
-  - name: 'print_sch'
-    comment: "Print schematic (PDF)"
+  - name: 'print_sch_svg'
+    comment: "Print schematic (svg)"
     type: svg_sch_print
     dir: .
     options:
